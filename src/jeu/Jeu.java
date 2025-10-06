@@ -28,5 +28,5 @@ public class Jeu {
 	public Sabot getSabot() {
 		return sabot;
 	}
-
+	
 }
