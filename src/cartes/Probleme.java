@@ -1,5 +1,7 @@
 package cartes;
 
+import java.util.Objects;
+
 public abstract class Probleme extends Carte {
 	
 	private Type type;
@@ -17,12 +19,18 @@ public abstract class Probleme extends Carte {
         if (this == obj) {
             return true;
         }
-        if (obj == null || getClass() != obj.getClass()) {
+        if (obj == null || this.getClass() != obj.getClass()) {
             return false;
         }
         Probleme prob = (Probleme) obj;
         return type == prob.type;
     }
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(getClass(), type);
+		
+	}
 
 }
 

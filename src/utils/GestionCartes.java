@@ -14,18 +14,18 @@ public class GestionCartes {
 
 	public static <E> E extraire(List<E> liste) {
 		if (liste == null || liste.isEmpty()) {
-			throw new IllegalArgumentException("La liste peut pas être vide");
+			throw new IllegalArgumentException("La liste peut pas etre vide");
 		}
 		int indice = random.nextInt(liste.size());
 		return liste.remove(indice);
 	}
 
-	// VERSION ITÉRATEUR
+	// VERSION ITERATEUR
 
 	public static <E> E extraireIterator(List<E> liste) {
 
 		if (liste == null || liste.isEmpty()) {
-			throw new IllegalArgumentException("La liste peut pas être vide");
+			throw new IllegalArgumentException("La liste peut pas etre vide");
 		}
 
 		int indice = random.nextInt(liste.size());
