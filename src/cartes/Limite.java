@@ -7,7 +7,7 @@ public abstract class Limite extends Carte {
 		if (this == obj) {
 			return true;
 		}
-		if(obj == null) {
+		if(obj == null || this.getClass() != obj.getClass() ){
 			return false;
 		}
 		return true;

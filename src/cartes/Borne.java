@@ -22,11 +22,16 @@ public class Borne extends Carte {
 		if (this == obj) {
 			return true;
 		}
-		if (obj == null ) {
+		if (obj == null || this.getClass() != obj.getClass()){
 			return false;
 		}
 		Borne bor = (Borne) obj;
 		return km == bor.km;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Integer.hashCode(km);
 	}
 }
 
